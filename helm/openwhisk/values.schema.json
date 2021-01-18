@@ -333,6 +333,13 @@
         { "properties": { "httpsPort": { "type": "integer", "minimum": 0 } }, "required": ["httpsPort"] }
       ]
     },
+    "zipkin": {
+      "allOf": [
+        { "$ref": "#/definitions/podspec" },
+        { "properties": { "httpPort": { "type": "integer", "minimum": 0 } }, "required": ["httpPort"] },
+        { "properties": { "httpsPort": { "type": "integer", "minimum": 0 } }, "required": ["httpsPort"] }
+      ]
+    },
 
     "controller": {
       "allOf": [
