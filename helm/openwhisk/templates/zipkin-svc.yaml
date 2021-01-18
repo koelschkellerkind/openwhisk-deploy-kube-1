@@ -40,7 +40,7 @@ spec:
   ports:
     - port: {{ .Values.zipkin.httpPort }}
       {{- if eq .Values.whisk.ingress.type "NodePort" }}
-      nodePort: {{ .Values.zipkin.httpsNodePort }}
+      nodePort: {{ .Values.zipkin.httpNodePort }}
       {{- end }}
       name: http
       targetPort: http
