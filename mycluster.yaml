@@ -1,4 +1,6 @@
 controller:
+  imageName: "openwhiskansjin/controller"
+  imageTag: "1"
   replicaCount: 1
 whisk:
   ingress:
@@ -11,8 +13,14 @@ k8s:
 nginx:
   httpsNodePort: 31001
 invoker:
+  imageName: "openwhiskansjin/invoker"
+  imageTag: "1"
   containerFactory:
     impl: "kubernetes"
+    
+zipkin:
+  httpsNodePort: 31000    
+  
 metrics:
   prometheusEnabled: true
 metrics:
