@@ -39,13 +39,9 @@ spec:
     name: {{ .Release.Name }}-zipkin
   ports:
     - port: {{ .Values.zipkin.httpPort }}
-      name: http
-    - port: {{ .Values.zipkin.httpsPort }}
       {{- if eq .Values.whisk.ingress.type "NodePort" }}
       nodePort: {{ .Values.zipkin.httpsNodePort }}
       {{- end }}
-      name: https-api
-      {{- if eq .Values.whisk.ingress.awsSSL "true"}}
+      name: http
       targetPort: http
-      {{- end}}
 {{- end }}
