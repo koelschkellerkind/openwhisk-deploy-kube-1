@@ -19,7 +19,7 @@ invoker:
     impl: "kubernetes"
     
 zipkin:
-  httpsNodePort: 31000    
+  httpNodePort: 31000    
   
 metrics:
   prometheusEnabled: true
