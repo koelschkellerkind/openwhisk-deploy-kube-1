@@ -254,7 +254,7 @@ zipkin:
   replicaCount: 1
   restartPolicy: "Always"
   httpPort: 9411
-  httpsNodePort: 31000
+  httpNodePort: 31000
 
 # Controller configurations
 controller:
