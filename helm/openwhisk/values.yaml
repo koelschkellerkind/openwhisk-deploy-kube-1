@@ -249,7 +249,7 @@ nginx:
 # zipkin configurations
 zipkin:
   imageName: "openzipkin/zipkin"
-  imageTag: "2"
+  imageTag: "latest"
   imagePullPolicy: "IfNotPresent"
   replicaCount: 1
   restartPolicy: "Always"
